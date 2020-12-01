@@ -93,7 +93,6 @@ const QUESTIONCHOICES = [
 ];
 
 function renderStartPage() {
-  console.log("renderStartPage ran");
   $(".js-page-display").html(`
         <h2>Welcome, aspiring divers!</h2>
         <p>This short quiz will test your knowledge about scuba diving whether\
@@ -111,7 +110,6 @@ let questionsLength = 7;
 
 function renderQuestionPage() {
   $(".js-page-display").on("click", ".js-start-button", function (event) {
-    console.log("renderQuestionPage ran");
     let currentQuestion = QUESTIONCHOICES[index];
     if (index <= questionsLength) {
       $(".js-page-display").html(`
@@ -166,7 +164,6 @@ function renderQuestionPage() {
 }
 
 function renderFeedbackPage() {
-  console.log("renderFeedbackPage ran");
   $(".js-page-display").on("click", ".js-submit-button", function (event) {
     const correctChoice = QUESTIONCHOICES[index].correct;
     const selectedChoice = $("input[name='choices']:checked").val();
@@ -192,7 +189,6 @@ function renderFeedbackPage() {
 }
 
 function renderFinalPage() {
-  console.log("renderFinalPage ran");
   $(".js-page-display").html(`
     <h2>Congratulations, you're done!</h2>
     <h3>You got ${questionsCorrect}/10 questions correct.</h3>
@@ -203,14 +199,12 @@ function renderFinalPage() {
 }
 
 function restartQuiz() {
-  console.log("restartQuiz ran");
   $(".js-page-display").on("click", ".js-restart-button", function (event) {
     location.reload();
   });
 }
 
 function handleQuizApp() {
-  console.log("handleQuizApp ran");
   renderStartPage();
   renderQuestionPage();
   renderFeedbackPage();
