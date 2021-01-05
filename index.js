@@ -192,7 +192,7 @@ function renderFeedbackPage() {
 function renderFinalPage() {
   $(".js-page-display").html(`
     <h2>Congratulations, you're done!</h2>
-    <h3>You got ${questionsCorrect}/10 questions correct.</h3>
+    <h3>You got ${questionsCorrect}/8 questions correct.</h3>
     <p>No matter your skill level, it's always important to review the facts on dry land\
      so you're better prepared underwater. See you beneath the waves!</p>
     <button class="js-restart-button">Start Over</button>
